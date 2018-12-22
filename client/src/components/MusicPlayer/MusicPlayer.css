@@ -1,0 +1,20 @@
+.music-player {
+    background: rgba(255,255,255, 0.1);
+    color: #eee;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    height: 100px;
+    width: 300px;
+    padding: 0.4rem 1rem;
+}
+
+.music-player p {
+    margin: 0;
+}
+
+.music-player .track-img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import MusicPlayer from './components/MusicPlayer/MusicPlayer';
 
 class App extends Component {
   constructor() {
@@ -7,7 +10,11 @@ class App extends Component {
   }
 
   render() {
-    return <h1>Yo</h1>;
+    return (
+      <div>
+        <MusicPlayer />
+      </div>
+    );
   }
 }
 
