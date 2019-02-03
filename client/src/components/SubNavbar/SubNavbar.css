@@ -1,0 +1,23 @@
+.navbar-sub {
+    height: 50px;
+    font-family: 'Krub', sans-serif;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navbar-sub .navbar-nav .nav-item .nav-link {
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-sub .navbar-nav .nav-item .nav-link:hover {
+    border-color: #3A99FC;
+}
+
+.navbar-sub .navbar-nav .nav-item .nav-link.active,
+.navbar-sub .navbar-nav .nav-item .nav-link.active:hover {
+    border-color: #00448B;
+}
+
+.navbar-sub span:hover {
+    cursor: pointer
+}

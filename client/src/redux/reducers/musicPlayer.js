@@ -20,7 +20,9 @@ export default function(state = initialState, action) {
     case REMOVE_TRACK_FROM_QUEUE:
       return {
         ...state,
-        trackQueue: [...state.trackQueue].splice(0, 0)
+        trackQueue: [...state.trackQueue].splice(action.index, 1)
       };
+    default:
+      return state;
   }
 };

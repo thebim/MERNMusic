@@ -1,0 +1,32 @@
+.grid-item {
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-item-img {
+    width: 100%;
+}
+
+.grid-item-details {
+    margin-top: 0.4rem;
+}
+
+.grid-item-details p:last-child {
+    margin-top: 0.2rem;
+}
+
+.grid-item-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.grid-item-artist {
+    position: absolute;
+    bottom: 0;
+}
+
+.grid-item-artist .btn {
+    font-family: sans-serif;
+    font-size: 12px !important;
+    font-weight: 500;
+}

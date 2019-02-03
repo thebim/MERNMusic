@@ -1,0 +1,13 @@
+.widget-title h4 {
+    display: inline;
+}
+
+.widget-title {
+    padding: 0 1rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.widget-body {
+    padding: 0 1rem;
+}

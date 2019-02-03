@@ -18,6 +18,11 @@ const refreshClientCredentials = () => {
   );
 };
 
+/**
+ *  Gets a fresh access token on initialization and then ensures that the
+ *  token is refreshed right before it expires (one hour automatically per
+ *  Spotify Web API).
+ */
 refreshClientCredentials();
 setInterval(() => {
   refreshClientCredentials()

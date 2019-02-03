@@ -1,0 +1,18 @@
+.banner-container {
+    width: 100%;
+    background: #908F8F;
+    padding: 2rem 0;
+}
+
+.artist-banner-img {
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    padding: 0 !important;
+}
+
+.artist-banner-info {
+    padding-left: 2rem !important;
+}
+
+.genre-list-btn {
+    font-size: 12px !important;
+}

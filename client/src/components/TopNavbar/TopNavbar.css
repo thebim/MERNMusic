@@ -1,0 +1,13 @@
+.navbar-nav {
+    font-family: 'Krub', sans-serif;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-main {
+    padding-top: 3rem !important;
+    padding-bottom: 1rem !important;
+}
