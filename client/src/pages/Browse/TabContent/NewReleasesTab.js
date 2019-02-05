@@ -12,6 +12,7 @@ class NewReleases extends Component {
       hasMore: true,
       offset: 0
     };
+
     this.getNewReleases = this.getNewReleases.bind(this);
 
     // Binding infinite scroll.
@@ -66,10 +67,8 @@ class NewReleases extends Component {
         actionText: 'View More',
         actionUrl: '#' }}
       >
-        <MusicGrid type="albums" items={this.state.newReleases} />
-        {
-          this.state.loading && <p style={{textAlign: 'center'}}>Loading...</p>
-        }
+        <MusicGrid type="album" items={this.state.newReleases} />
+        { this.state.loading && <p style={{textAlign: 'center'}}>Loading...</p> }
       </Widget>
     );
   }

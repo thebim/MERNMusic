@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { shortenText } from "../../utilities/textFormatter";
 
-const MusicGridItem = (props) => {
+const AlbumGridItem = (props) => {
   const { item } = props;
   return (
     <div className="grid-item col-lg-2 col-md-3 col-sm-6 col-xs-12">
@@ -18,8 +18,8 @@ const MusicGridItem = (props) => {
   )
 };
 
-MusicGridItem.propTypes = {
+AlbumGridItem.propTypes = {
   item: PropTypes.object.isRequired
 };
 
-export default MusicGridItem;
+export default AlbumGridItem;

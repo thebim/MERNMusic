@@ -9,8 +9,7 @@ const cors = require('cors');
 /**
  * Route Imports
  */
-const Test = require('./routes/test');
-const Spotify = require('./routes/spotify');
+const spotifyRouter = require('./routes/spotify');
 
 /**
  * Config
@@ -24,8 +23,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/api/test', Test);
-app.use('/api/spotify', Spotify);
+app.use('/api/spotify', spotifyRouter);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}.`);

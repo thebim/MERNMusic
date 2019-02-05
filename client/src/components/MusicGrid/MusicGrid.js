@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MusicGridItem from "./MusicGridItem";
+import AlbumGridItem from './AlbumGridItem';
+import GenreGridItem from './GenreGridItem';
 import './MusicGrid.css';
 
 const MusicGrid = (props) => {
   return (
     <div className="row">
-      { props.items.map((item, idx) => <MusicGridItem key={idx} item={item} />) }
+      { props.type === 'album' && (props.items.map((item, idx) => <AlbumGridItem key={idx} item={item} />)) }
+      { props.type === 'genre' && (props.items.map((item, idx) => <GenreGridItem key={idx} item={item} />)) }
     </div>
   )
 };

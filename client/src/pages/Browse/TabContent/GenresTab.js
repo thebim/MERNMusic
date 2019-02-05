@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { Widget, MusicGrid } from '../../../components/index';
-import { getNewReleases } from "../../../api/api";
+import { getGenres } from "../../../api/api";
 
 class GenresTab extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newReleases: [],
+      genres: [],
       loading: false,
       error: false,
       hasMore: true,
       offset: 0
     };
-    this.getNewReleases = this.getNewReleases.bind(this);
+    this.getGenres = this.getGenres.bind(this);
 
     // Binding infinite scroll.
     window.onscroll = () => {
       const {
-        getNewReleases,
+        getGenres,
         state: {
           error,
           loading,
@@ -27,26 +27,26 @@ class GenresTab extends Component {
       } = this;
       if (error || loading || !hasMore) return;
       if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-        getNewReleases(offset);
+        getGenres(offset);
       }
     };
   }
 
   componentDidMount() {
-    this.getNewReleases(0);
+    this.getGenres(0);
   }
 
-  getNewReleases(offset) {
+  getGenres(offset) {
     this.setState({ loading: true }, () => {
-      getNewReleases(offset)
+      getGenres(offset)
         .then(res => {
           this.setState({
-            hasMore: (this.state.newReleases.length < res.data.albums.total),
+            hasMore: (this.state.genres.length < res.data.categories.total),
             loading: false,
             offset: this.state.offset + 20,
-            newReleases: [
-              ...this.state.newReleases,
-              ...res.data.albums.items
+            genres: [
+              ...this.state.genres,
+              ...res.data.categories.items
             ]
           });
         })
@@ -66,7 +66,7 @@ class GenresTab extends Component {
         actionText: 'View More',
         actionUrl: '#' }}
       >
-        <MusicGrid type="albums" items={this.state.newReleases} />
+        <MusicGrid type="genre" items={this.state.genres} />
         {
           this.state.loading && <p style={{textAlign: 'center'}}>Loading...</p>
         }

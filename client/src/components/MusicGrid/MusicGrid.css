@@ -3,6 +3,10 @@
     margin-bottom: 3rem;
 }
 
+.grid-item.genre {
+    margin-bottom: 0;
+}
+
 .grid-item-img {
     width: 100%;
 }
